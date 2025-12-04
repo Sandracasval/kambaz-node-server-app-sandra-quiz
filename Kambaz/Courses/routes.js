@@ -3,6 +3,7 @@ import EnrollmentsDao from "../Enrollments/dao.js";
 export default function CourseRoutes(app, db) {
 
   const dao = CoursesDao(db);
+   const enrollmentsDao = EnrollmentsDao(db);
 
   const findAllCourses = async (req, res) => {
     const courses = await dao.findAllCourses();
@@ -21,7 +22,7 @@ export default function CourseRoutes(app, db) {
     const courses = await enrollmentsDao.findCoursesForUser(userId);
     res.json(courses);
   };
-  const enrollmentsDao = EnrollmentsDao(db);
+
 
   const createCourse = async (req, res) => {
     const currentUser = req.session["currentUser"];

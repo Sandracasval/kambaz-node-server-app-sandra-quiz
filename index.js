@@ -12,7 +12,9 @@ import QuizzesRoutes from "./Kambaz/Quizzes/routes.js";
 import "dotenv/config";
 import session from "express-session";
 
-const CONNECTION_STRING = "mongodb+srv://emilycky1968:Rebecca968@kambaz.fnextzl.mongodb.net/kambaz"
+const CONNECTION_STRING =
+  "mongodb+srv://SandraCastro280:Sueterazul21@kambaz.lsqkmqf.mongodb.net/kambaz?retryWrites=true&w=majority&appName=Kambaz";
+
 mongoose.connect(CONNECTION_STRING);
 
 mongoose.connection.on('connected', () => {
