@@ -17,12 +17,12 @@ const CONNECTION_STRING =
 
 mongoose.connect(CONNECTION_STRING);
 
-mongoose.connection.on('connected', () => {
-  console.log('✅ MongoDB connected successfully');
+mongoose.connection.on("connected", () => {
+  console.log("✅ MongoDB connected successfully");
 });
 
-mongoose.connection.on('error', (err) => {
-  console.log('❌ MongoDB connection error:', err);
+mongoose.connection.on("error", (err) => {
+  console.log("❌ MongoDB connection error:", err);
 });
 
 const app = express();
